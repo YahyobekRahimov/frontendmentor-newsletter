@@ -1,0 +1,52 @@
+@import "./variables";
+@import "./normalize";
+@import "./fonts";
+@import "./general";
+
+main {
+    background-color: $clr-gray-900;
+}
+
+.success__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.success-block {
+    background: $clr-white-900;
+    padding: 50px;
+    border-radius: 25px;
+    width: 470px;
+}
+
+.success-block {
+    h1 {
+        color: $clr-gray-900;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 1em;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+        span {
+            font-weight: 700;
+        }
+    }
+    button {
+        width: 100%;
+        height: 50px;
+        border-radius: 6px;
+        background-color: $clr-gray-900;
+        color: $clr-white-900;
+        border: none;
+        font-weight: 700;
+        &:hover {
+            background: linear-gradient(90deg, rgba(255,82,123,1) 0%, rgba(255,101,72,1) 100%); 
+        }
+    }
+}

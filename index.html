@@ -4,43 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/general.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <title>Newsletter sign-up form with success message</title>
 </head>
 
 <body>
-
-    <!-- Header section -->
-
-    <header class="header">
-        <div class="container header__container">
-
-        </div>
-    </header>
-
     <!-- Main -->
-
     <main>
-        <section class="">
-            <div class="container">
+        <div class="container newsletter__container">
+            <div class="newsletter__block">
+                <div class="block__description">
+                    <h1>Stay updated!</h1>
+                    <p>
+                        Join 60,000+ product managers receiving monthly <br>updates on:
+                    </p>
+                    <ul>
+                        <li><span>Product discovery and building what matters</span></li>
+                        <li><span>Measuring to ensure updates are a success</span></li>
+                        <li><span>And much more!</span></li>
+                    </ul>
+                    <div class="email-label-error">
+                        <label for="emailInput">Email address</label>
+                        <div id="errorMessage">Valid email required</div>
+                    </div>
+                    <input autofocus onfocus="reAttempt()" id="emailInput" type="email" placeholder="email@company.com">
+                    <input onclick="emailValidation()" id="submitButton" type="submit" value="Subscribe to monthly
+                    newsletter">
+                </div>
+                <div class="block__image">
+                    <picture>
+                        <source media="(max-width: 375px)" srcset="./images/illustration-sign-up-mobile.svg">
+                        <source media="(max-width: 1440px)" srcset="./images/illustration-sign-up-desktop.svg">
 
+                        <img src="./images/illustration-sign-up-desktop.svg" alt="Newsletter sign-up image">
+                    </picture>
+                </div>
             </div>
-        </section>
-
-        <section class="">
-            <div class="container">
-
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container footer__container">
-            
         </div>
-    </footer>
+    </main>
+    <script src="./js/email-validation.js"></script>
 </body>
 
 </html>
